@@ -16,13 +16,13 @@ class CadastroPage extends BasePage {
                 modalLoginSucesso: '.alert-link',
                 emailLogin: '[data-testid="email"]',
                 senhaLogin: '[data-testid="senha"]',
-                btnEntrar:'[data-testid="entrar"]'
+                btnEntrar: '[data-testid="entrar"]'
             }
         };
     }
 
     iniciarNovoCadastro() {
-        this.click(this.selectors.cadastro.lnkCadastrar);
+        this.click(this.selectors.cadastro.lnkCadastrar)
         return this;
     }
 
@@ -46,27 +46,6 @@ class CadastroPage extends BasePage {
         this.checkContain(this.selectors.cadastro.modalLoginSucesso, mensagem);
         return this;
     }
-
-    tentarLoginComUsuarioInvalido() {
-        const emailInvalido = 'invalido@teste.com';
-        const senhaInvalida = '123456';
-
-        cy.log('Tentando login com usuário inválido');
-        cy.log(`Email: ${emailInvalido}`);
-        cy.log(`Senha: ${senhaInvalida}`);
-
-        console.log('Tentativa de login inválido:', { emailInvalido, senhaInvalida });
-
-        this.type(this.selectors.cadastro.emailLogin, emailInvalido);
-        this.type(this.selectors.cadastro.senhaLogin, senhaInvalida);
-        this.click(this.selectors.cadastro.btnEntrar);
-        
-        cy.contains('Email e/ou senha inválidos').should('be.visible');
-
-        return this;
-    }
-
-
 
 }
 

@@ -1,4 +1,5 @@
 import CadastroPage from '../pages/modules/CadastroPage';
+import LoginPage from '../pages/modules/LoginPage';
 
 describe('Acessar Site', () => {
   beforeEach(() => {
@@ -14,7 +15,12 @@ describe('Acessar Site', () => {
 
 
   it('Login inválido', () => {
-    CadastroPage
+    LoginPage
       .tentarLoginComUsuarioInvalido();
+  });
+
+  it('Login com sucesso', () => {
+    LoginPage
+      .loginValido();
   });
 });
