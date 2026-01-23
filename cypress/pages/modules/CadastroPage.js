@@ -33,9 +33,9 @@ class CadastroPage extends BasePage {
         this.type(this.selectors.cadastro.senha, '12345')
 
         // Log 
-        cy.log(`Nome: ${this.testData.nomeCompleto}`);
-        cy.log(`Email: ${this.testData.email}`);
-        cy.log(`Senha: 12345`);
+        cy.log('Nome: ${this.testData.nomeCompleto}');
+        cy.log('Email: ${this.testData.email}');
+        cy.log('Senha: 12345');
         return this;
     }
 

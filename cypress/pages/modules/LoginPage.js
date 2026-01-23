@@ -19,8 +19,8 @@ class LoginPage extends BasePage {
         const senhaInvalida = '123456';
 
         cy.log('Tentando login com usuário inválido');
-        cy.log(`Email: ${emailInvalido}`);
-        cy.log(`Senha: ${senhaInvalida}`);
+        cy.log('Email: ${emailInvalido}');
+        cy.log('Senha: ${senhaInvalida}');
 
         console.log('Tentativa de login inválido:', { emailInvalido, senhaInvalida });
 
@@ -38,8 +38,8 @@ class LoginPage extends BasePage {
         const senhaValida = '123456';
 
         cy.log('Tentando login com usuário válido');
-        cy.log(`Email: ${emailValido}`);
-        cy.log(`Senha: ${senhaValida}`);
+        cy.log('Email: ${emailValido}');
+        cy.log('Senha: ${senhaValida}');
 
         console.log('Tentativa de login valido:', { emailValido, senhaValida });
 
