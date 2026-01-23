@@ -20,7 +20,7 @@ class BasePage {
      * @returns {Cypress.Chainable}
      */
     checkContain(selector, variable) {
-        this.getElement(selector).should('contain', variable);
+        return this.getElement(selector).should('contain', variable);
     }
 
 
